@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Web Component</title>
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .default-class {
+            padding: 50px;
+        }
+        .default-class td {
+            border: 1px solid #b4acac;
+            text-align: left;
+            padding: 8px;
+        }
+        .default-class th {
+            border: 1px solid #8f8b8b;
+            text-align: left;
+            padding: 8px;
+        }
+        .blue-table {
+            background-color: rgb(7, 28, 87);
+            color:rgb(193, 194, 197);
+        }
+        .blue-table th {
+            background-color: rgb(193, 194, 197);
+            color:rgb(0, 1, 2);
+        }
+        .green-table {
+            background-color: rgb(166, 223, 140);
+        }
+        .green-table th {
+            background-color: rgb(91, 141, 68);
+            color: aliceblue;
+        }
+        .warm-table {
+            background-color: rgb(223, 208, 140);
+        }
+        .warm-table th {
+            background-color: rgb(209, 111, 20);
+            color: aliceblue;
+        }
+        .warm-table tr:nth-child(even) {
+            background-color: #ceb485;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid" id="app">
+        <table-component :table-content="table1" class="default-class" table-style="blue-table"></table-component>
+        <table-component :table-content="table2" class="default-class" table-style="green-table"></table-component>
+        <table-component :table-content="table3" class="default-class" table-style="warm-table"></table-component>
+    </div>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- vuejs 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js"></script>
+    <!-- vue app -->
+    <script src="./components/row-component.js"></script>
+    <script src="./components/table-component.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
